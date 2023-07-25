@@ -59,14 +59,13 @@ img{
 .navbar-container{
   max-width: var(--max-width);
   margin:auto;
-  padding: 0 2rem;
   overflow: hidden; /*Always shows the content within*/
   display: grid;
   grid-template-columns: 3fr 2fr 1fr;
   padding: 1rem;
 
   align-items: center;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 
 
 }
@@ -75,7 +74,7 @@ img{
 #main-nav .logo {
   width: 180px;
   grid-column: 1;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 /* Using Grid to put the two rows in columns, we can also use flex */
@@ -83,7 +82,7 @@ img{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 
@@ -92,34 +91,47 @@ img{
 .social {
   grid-column: 2;
   justify-self: center;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 
 }
 
-.lead-button {
-  grid-column: 3;
-  justify-self: end;
-  border: 1px solid rgb(0, 0, 0);
-
-}
-
-
-
-
-
-
-
-
- 
-  
 
 /* Button */  
 .lead-button{
+  grid-column: 3;
+  justify-self: end;
+  /* border: 1px solid rgb(5, 255, 5); */
   display: inline-block;
-  background-color: #333;
+  /* background-color:  */
   padding: 13px 20px;
-  border: none;
   cursor: pointer;
   font-size: 18px;
-  color:#ddd;
+  color:var(--dark-color);
 }
+
+#main-nav .navbar-container ul li a.current{
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+#main-nav .navbar-container ul li a:hover{
+  background-color: var(--light-color);
+  color: var(--dark-color)
+}
+
+#main-nav .navbar-container ul li a{
+  padding: 0.75rem;
+  font-weight: bold;
+}
+
+#main-nav .navbar-container .social {
+  justify-self: center;
+}
+
+#main-nav .navbar-container .social i{
+  color: #777;
+  margin-right: .5rem;
+}
+
+
+
