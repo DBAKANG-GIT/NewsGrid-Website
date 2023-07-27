@@ -1,11 +1,11 @@
 /* Reset */
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-:root{
+:root {
   --primary-color: #c72727;
   --secondary-color: #f99500;
   --light-color: #f3f3f3;
@@ -14,52 +14,62 @@
   --white-color: #fff;
 }
 
-.category{
+.category {
   --sports-color: #f99500;
-  --ent-color:  #a66bbe;
+  --ent-color: #a66bbe;
   --tech-color: #009cff;
 }
 
 /* Main Styling */
 html,
-body{
-  font-family: 'Lato', sans-serif; /*Standard text like paragraphs*/ 
+body {
+  font-family: 'Lato', sans-serif;
+  /*Standard text like paragraphs*/
   line-height: 1.5;
   background-color: var(--light-color);
 
 }
 
-h1, h2, h3, h4, h5, h6{
-  font-family: 'Staatliches', cursive; /*cursive; For Headings*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Staatliches', cursive;
+  /*cursive; For Headings*/
   margin-bottom: .55rem;
   line-height: 1.3;
 }
 
-a{
+a {
   text-decoration: none;
   color: var(--dark-color);
 }
 
-ul{
+ul {
   list-style: none;
 }
 
-img{
+img {
   width: 100%;
 }
 
-#main-nav{
+#main-nav {
   background-color: var(--white-color);
   position: sticky;
-  top:0; /*Stick to the top*/
+  top: 0;
+  /*Stick to the top*/
   z-index: 2;
 
 }
+
 /* Utility */
-.navbar-container{
+.navbar-container {
   max-width: var(--max-width);
-  margin:auto;
-  overflow: hidden; /*Always shows the content within*/
+  margin: auto;
+  overflow: hidden;
+  /*Always shows the content within*/
   display: grid;
   grid-template-columns: 3fr 2fr 1fr;
   padding: 1rem;
@@ -68,7 +78,7 @@ img{
   /* border: 1px solid black; */
 }
 
-.category{
+.category {
   /* Padding, Margins etc */
   display: inline-block;
   color: var(--white-color);
@@ -79,34 +89,105 @@ img{
   margin-bottom: 0.5rem;
 }
 
-.category-sports{background-color: var(--sports-color);}
-.category-ent{background-color: var(--ent-color);}
-.category-tech{background-color: var(--tech-color);}
+.category-sports {
+  background-color: var(--sports-color);
+}
 
-.btn{
-  display:inline-block;
+.category-ent {
+  background-color: var(--ent-color);
+}
+
+.category-tech {
+  background-color: var(--tech-color);
+}
+
+.btn {
+  display: inline-block;
   padding: 0.5rem 1.4rem;
   border: none;
   cursor: pointer;
   font-size: 18px;
-  color:var(--white-color);
+  color: var(--white-color);
   background-color: var(--dark-color);
 
 }
+/* Card Utility class to hold article */
+.card{
+  background-color: var(--white-color);
+  padding: 1rem;
+}
 
-.btn-light{background-color: var(--light-color);}
-.btn-dark{background-color: var(--dark-color);}
-.btn-primary{background-color: var(--primary-color);}
-.btn-secondary{background-color: var(--secondary-color);}
+.btn-light, .bg-light {
+  background-color: var(--light-color);
+}
 
-.btn:hover{opacity: 0.8;}
+.btn-dark, .bg-dark {
+  background-color: var(--dark-color);
+}
 
-.btn-block{
+.btn-primary, .bg-primary {
+  background-color: var(--primary-color);
+}
+
+.btn-secondary, .bg-secondary {
+  background-color: var(--secondary-color);
+}
+
+.bg-dark{
+  background-color: var(--dark-color);
+  color:var(--white-color);
+}
+
+.bg-light{
+  color:var(--dark-color);
+}
+
+.bg-primary{
+  color: var(--white-color);
+}
+
+.bg-secondary{
+  color: var(--white-color);
+}
+
+.py-1{padding: 1.5rem;}
+.py-2{padding: 2rem;}
+.py-3{padding: 3rem;}
+/* All around Padding */
+.p-1{padding: 1.5rem;}
+.p-2{padding: 2rem;}
+.p-3{padding: 3rem;}
+
+.bg-dark h1,
+.bg-dark h2,
+.bg-dark h3,
+.bg-dark a,
+.bg-primary h1,
+.bg-primary h2,
+.bg-primary h3,
+.bg-primary a,
+.bg-secondary h1,
+.bg-secondary h2,
+.bg-secondary h3,
+.bg-secondary a {
+  color: #fff;
+}
+
+
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn-block {
   display: block;
-  width: 100%; /*Might not need this as block uses 100% width of container*/
+  width: 100%;
+  /*Might not need this as block uses 100% width of container*/
   text-align: center;
 
 }
+
+
 
 
 #main-nav .logo {
@@ -116,7 +197,7 @@ img{
 }
 
 /* Using Grid to put the two rows in columns, we can also use flex */
-#main-nav ul{
+#main-nav ul {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px;
@@ -134,8 +215,8 @@ img{
 }
 
 
-/* Button */  
-.lead-button{
+/* Button */
+.lead-button {
   grid-column: 3;
   justify-self: end;
   /* border: 1px solid rgb(5, 255, 5); */
@@ -144,20 +225,20 @@ img{
   padding: 13px 20px;
   cursor: pointer;
   font-size: 18px;
-  color:var(--dark-color);
+  color: var(--dark-color);
 }
 
-#main-nav .navbar-container ul li a.current{
+#main-nav .navbar-container ul li a.current {
   background-color: var(--primary-color);
   color: var(--white-color);
 }
 
-#main-nav .navbar-container ul li a:hover{
+#main-nav .navbar-container ul li a:hover {
   background-color: var(--light-color);
   color: var(--dark-color)
 }
 
-#main-nav .navbar-container ul li a{
+#main-nav .navbar-container ul li a {
   padding: 0.75rem;
   font-weight: bold;
 }
@@ -166,21 +247,22 @@ img{
   justify-self: center;
 }
 
-#main-nav .navbar-container .social i{
+#main-nav .navbar-container .social i {
   color: #777;
   margin-right: .5rem;
 }
+
 /* Showcase */
-#showcase{
+#showcase {
   color: var(--white-color);
   background-color: var(--dark-color);
   border: 1px red solid;
   padding: 2rem;
-  position:relative;
+  position: relative;
 
 }
 
-#showcase::before{
+#showcase::before {
   content: '';
   background: url(../image_resources/featured.jpg) no-repeat center center/cover;
   position: absolute;
@@ -191,14 +273,14 @@ img{
   height: 100%;
 }
 
-#showcase .showcase-container{
+#showcase .showcase-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
   align-items: center;
   height: 50vh;
   z-index: -1;
-}  
+}
 
 #showcase .showcase-container>* {
   position: relative;
@@ -211,9 +293,34 @@ img{
 }
 
 #showcase .showcase-container .showcase-content>p {
-margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
+/* Container around the whole article section */
+.container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 0 2rem;
+  overflow: hidden;
+}
 
+/* Styling Article Grid */
+#home-articles .articles-container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
 
+}
+#home-articles .articles-container > article:first-child,
+#home-articles .articles-container > article:last-child{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  align-items: center;
+  grid-column: 1 / span 2;
+}
+
+#home-articles .articles-container > article:last-child{
+  grid-column: 2 / span 2; /* Start at 2 and go 2 vertical lines across */
+}
 
