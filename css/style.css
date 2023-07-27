@@ -207,6 +207,17 @@ img {
   color: var(--primary-color);
 }
 
+/* Inner Page Grid Container */
+.page-container{
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 6fr 2fr;
+  margin: 2rem 0;
+}
+
+.page-container > *:first-child{
+  grid-row: 1 /span 3; /* To add More contents, I can increase the span
+}
 
 
 
