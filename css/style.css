@@ -31,6 +31,10 @@ body {
 
 }
 
+.l-heading{
+  font-size: 3rem;
+}
+
 h1,
 h2,
 h3,
@@ -68,6 +72,8 @@ img {
   z-index: 2;
 
 }
+
+
 
 /* Utility */
 .navbar-container {
@@ -203,6 +209,10 @@ img {
   color: var(--white-color);
 }
 
+.card .list li a{
+  color: var(--dark-color);
+}
+
 .list li a:hover{
   color: var(--primary-color);
 }
@@ -216,7 +226,7 @@ img {
 }
 
 .page-container > *:first-child{
-  grid-row: 1 /span 3; /* To add More contents, I can increase the span
+  grid-row: 1 /span 3; /* To add More contents, I can increase the span */
 }
 
 
@@ -224,7 +234,6 @@ img {
 #main-nav .logo {
   width: 180px;
   grid-column: 1;
-  /* border: 1px solid black; */
 }
 
 /* Using Grid to put the two rows in columns, we can also use flex */
@@ -400,3 +409,16 @@ img {
   width: 90%;
 }
 
+/* Article */
+#article .meta{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  background-color: #eee;
+  padding: .5rem;
+}
+
+#article .meta .category{
+  margin-top: .5rem;
+}
