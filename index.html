@@ -183,8 +183,16 @@
       <div class="footer-grid-item">
         <h3>Email Newsletter</h3>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        <form class="callback-form" 
+            name="callback-form" 
+            method="POST" 
+            data-netlify="true" 
+            data-netlify-recaptcha="true"
+        >
         <input type="email" name="email" id="email" placeholder="Enter Email.....">
         <input type="submit" value="Subscribe" class="btn btn-primary">
+        <div class="recaptcha-wrapper" data-netlify-recaptcha="true" ></div>
+        </form>
       </div >
       <div class="footer-grid-item">
         <h3>Site links</h3>
