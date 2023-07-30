@@ -28,3 +28,44 @@
     align-items: center;
     grid-column: 1;
   }
+
+
+  @media(max-width: 600px){
+      /* Stack Grid Items */
+      #showcase .showcase-container,
+      #home-articles .articles-container,
+      #main-footer .footer-container,
+      #about .container .page-container,
+      #article .container .page-container{
+        grid-template-columns: 1fr;
+      }
+
+      #main-footer .footer-container > .footer-grid-item:last-child{
+        grid-column: 1;
+      }
+
+      #main-footer .footer-container .footer-grid-item .btn{
+        width: auto;
+      }
+
+      #main-footer .footer-container > *{
+        border-bottom: #555 dotted 1px;
+        padding-bottom: 1rem;
+      }
+
+      #main-footer .footer-container > .footer-grid-item:last-child,
+      #main-footer .footer-container > .footer-grid-item:nth-child(3),
+      #main-footer .footer-container > .footer-grid-item:nth-child(4){
+        border-bottom: none;
+      }
+
+      
+  }
+
+  @media(max-width: 375px){
+    #showcase .container .showcase-container .showcase-content .btn {
+      display: none;
+    }
+  }
+
+

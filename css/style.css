@@ -292,11 +292,15 @@ img {
   margin-right: .5rem;
 }
 
+#main-nav .navbar-container .social i:hover{
+  color: var(--primary-color);
+}
+
 /* Showcase */
 #showcase {
   color: var(--white-color);
   background-color: var(--dark-color);
-  border: 1px red solid;
+  /* border: 1px red solid; */
   padding: 2rem;
   position: relative;
 
